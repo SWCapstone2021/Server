@@ -9,15 +9,4 @@ module.exports = {
         "node_modules",
         "src"
     ],
-    
-    reporters: [
-        'default',
-        [
-          './node_modules/jest-html-reporter',
-          {
-            pageTitle: 'Test Report',
-            outputPath: 'output/test/test-report.html',
-          },
-        ],
-    ],
 };
