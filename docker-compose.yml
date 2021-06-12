@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  # node:
+  #   build:
+  #     context: ./server_node
+  #     dockerfile: ./Dockerfile
+  #   ports:
+  #     - "5678:4000"
+  #     - "5679:443"
+  #   container_name: node
+
+  mongo:
+    image: mongo:4.4.1-bionic
+    container_name: mongo
+    volumes:
+      - /var/data
+    ports:
+      - "27017:27017"
+
+  flask:
+    build:
+      context: ./server_flask
+      dockerfile: ./Dockerfile
+    container_name: flask-v2
+  # restart: always
+    ports:
+      - "5678:5000"
+    environment:
+      - LC_ALL=C.UTF-8
+      - LANG=C.UTF-8
