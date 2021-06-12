@@ -34,6 +34,8 @@ jobs:
       - working-directory: ./server_node
         run: |
           npm ci
+          apt-get install -y python3-pip
+          python3 -m pip install --upgrade "git+https://github.com/nficano/pytube.git" 
           yarn install
       
       - name: test node server
