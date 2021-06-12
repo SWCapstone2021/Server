@@ -12,6 +12,7 @@
     "esm": "^3.2.25",
     "firebase": "^8.3.3",
     "firebase-admin": "^9.7.0",
+    "jest-html-reporter": "^3.4.1",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
     "koa-logger-winston": "0.0.2",
