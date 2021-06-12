@@ -15,14 +15,27 @@ jobs:
       matrix:
         node-version: [12.x]
         mongodb-version: ['4.4']
+        python-version: ['3.6']
 
     steps:
-    
+      
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
     
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          
+      - name: Install dependencies
+        run: |
+          python3 -m pip3 install --upgrade pip3
+          python3 -m pip install --upgrade "git+https://github.com/nficano/pytube.git" 
+          pip3 install xmltodict
+      
       - name: Create mongo Docker container
         id: build_mongo_docker
         uses: DigiPie/mongo-action@v1.0.1
@@ -35,7 +48,6 @@ jobs:
         run: |
           npm ci
           apt-get install -y python3-pip
-          python3 -m pip install --upgrade "git+https://github.com/nficano/pytube.git" 
           yarn install
       
       - name: test node server
