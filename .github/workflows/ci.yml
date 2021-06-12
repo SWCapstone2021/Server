@@ -43,13 +43,7 @@ jobs:
         env:
           HTTP_PORT: 4000
           MONGO_URI: mongodb://localhost:27017/dev # Access mongoDB Docker container
-      
-      - name: Archive test results 😉
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-report
-          path: server_node/output/test/test-report.html
-            
+  
       - name: Archive code coverage results 😛
         uses: actions/upload-artifact@v2
         with:
