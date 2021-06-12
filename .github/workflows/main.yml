@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@v2
       - working-directory: ./server_node
         run: |
-          node ci
           yarn install --frozen-lockfile
+          node ci
           yarn test
           
       - name: Archive test results 😉
