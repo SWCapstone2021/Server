@@ -1,14 +1,14 @@
-name: Test dev branch
+name: Test master branch
 on:
   push:
     branches:
-      - dev
+      - master
     # Optionally configure to run only for specific files. For example:
     # paths:
     # - "website/**"
 
 jobs:
-  VuejsTest:
+  NodeJSTest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
