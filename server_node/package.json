@@ -37,6 +37,6 @@
   "scripts": {
     "start": "node -r esm src",
     "start:dev": "nodemon --watch src/ -r esm src/index.js",
-    "test": "jest --forceExit --detectOpenHandles  --watchAll --maxWorkers=1"
+    "test": "jest --forceExit --detectOpenHandles --maxWorkers=1"
   }
 }
