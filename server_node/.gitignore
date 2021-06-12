@@ -1,4 +1,5 @@
+.env
 node_modules
 *.log
-.env
-
+credential.json
+findyou-22c20-firebase-adminsdk-yi8x6-37b941a2e7.json
