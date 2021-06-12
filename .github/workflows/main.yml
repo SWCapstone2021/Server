@@ -18,9 +18,9 @@ jobs:
           yarn install
       
       - name: test node server
-      - working-directory: ./server_node
         run: |
           yarn test
+        working-directory: ./server_node
       
       - name: Archive test results 😉
         uses: actions/upload-artifact@v2
