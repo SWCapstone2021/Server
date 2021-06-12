@@ -16,7 +16,6 @@
   <a href="https://github.com/SWCapstone2021/Server/actions/workflows/ci.yml">
     <img src = "https://github.com/SWCapstone2021/Server/actions/workflows/ci.yml/badge.svg">
     </a>
-  
 </p>
 <br>
 
