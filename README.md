@@ -3,8 +3,14 @@
 ## Introduction
 
 
-![image](https://user-images.githubusercontent.com/54361266/121766250-a25f9d80-cb8b-11eb-9702-b5cdd0e66913.png)
 
+<br/>
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/54361266/121766334-01bdad80-cb8c-11eb-9802-ddbfe25a83d9.png">
+  <br/>
+  FindU
+</p>
+<br>
 본 프로젝트는 2021년도 1학기 아주대학교 정보통신대학 소프트웨어학과에서 개설된 SW 캡스톤 디자인 과목을 수강하는 동안 개발했습니다. 찾아봐유는 유튜브에서 제공하는 자막을 이용하여, 동영상 내에서 사용자가 검색을 하면, 해당 내용이 포함된 위치를 알려주는 서비스입니다.
 
 ## Service Architecture
