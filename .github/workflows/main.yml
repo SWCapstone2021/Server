@@ -40,6 +40,9 @@ jobs:
         run: |
           yarn test
         working-directory: ./server_node
+        env:
+          HTTP_PORT: 4000
+          MONGODB_URI: mongodb://localhost:27017/dev # Access mongoDB Docker container
       
       - name: Archive test results 😉
         uses: actions/upload-artifact@v2
