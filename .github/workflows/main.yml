@@ -17,9 +17,10 @@ jobs:
           npm ci
           yarn install
       
-      - run: test node server
+      - name: test node server
       - working-directory: ./server_node
-          
+        run: yarn test
+      
       - name: Archive test results 😉
         uses: actions/upload-artifact@v2
         with:
