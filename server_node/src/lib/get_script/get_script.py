@@ -1,5 +1,9 @@
-from youtube_transcript_api.formatters import JSONFormatter
-from youtube_transcript_api import YouTubeTranscriptApi
+#from youtube_transcript_api.formatters import JSONFormatter
+#from youtube_transcript_api import YouTubeTranscriptApi
+import xmltodict
+# from six.moves import html_parser
+# html = html_parser.HTMLParser()
+from pytube import YouTube
 import sys
 import json
 import io
@@ -8,44 +12,59 @@ import io
 # sys.stdout.reconfigure(encoding='utf-8')
 
 
-# import subprocess
-# import sys
+# def get_script(id):
+    
+#     video_id = [id]
 
+    
+#     transcript = YouTubeTranscriptApi.get_transcripts(
+#         video_id, languages=['ko'])
 
-# def install(package):
-#     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+    
+#     transcript = transcript[0]
+#     sub = transcript[id]
+#     for x in sub:
+#         x.pop('duration', None)
 
+    
+#     data_transcript = {
+#         "video_id": id,
+#         "transcript": sub,
+#     }
 
-# package_list = ["youtube_transcript_api", "requirements.txt"]
-# install(package_list)
-
-
-# !pip install youtube_transcript_api
-# !pip install - r requirements.txt
-
-
+#     print(json.dumps(data_transcript, ensure_ascii=False))
+    
 def get_script(id):
-    # id
-    video_id = [id]
+   
+  video_id = id
+  yt = YouTube('https://youtube.com/watch?v='+str(video_id))
+  #raise Exception(yt.captions)
+  code = ''
+  for c in yt.captions:
+    if 'ko' in c.code:
+      code = c.code
+      break
+  scriptions = xmltodict.parse(
+    yt.captions.get_by_language_code(code).xml_captions)
+  
+  scriptions = json.loads(json.dumps(scriptions))
+  scriptions = scriptions['transcript']['text']
+  result = []
+  for sc in scriptions:
+    result.append({
+        'start': sc['@start'],
+        'text': sc['#text']
+    })
 
-    #
-    transcript = YouTubeTranscriptApi.get_transcripts(
-        video_id, languages=['ko'])
+  title = yt.title
 
-    #
-    transcript = transcript[0]
-    sub = transcript[id]
-    for x in sub:
-        x.pop('duration', None)
+  script_result = {
+    'video_id': video_id,
+    'title': title,
+    'transcript': result
+  }
 
-    #
-    data_transcript = {
-        "video_id": id,
-        "transcript": sub,
-    }
-
-    print(json.dumps(data_transcript, ensure_ascii=False))
-    # return data_transcript
+  print(json.dumps(script_result, ensure_ascii=False))
 
 
 def main():

@@ -1,8 +1,0 @@
-#custom
-.idea/
-data/*
-models/*
-log/*
-
-!data/*.py
-nohup.out

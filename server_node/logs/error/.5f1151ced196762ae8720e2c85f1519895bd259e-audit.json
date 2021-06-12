@@ -14,6 +14,36 @@
             "date": 1622301112325,
             "name": "logs/error/2021-05-30.error.log",
             "hash": "85dfa635030d134a0a591f4746eb10cf"
+        },
+        {
+            "date": 1622700470606,
+            "name": "logs/error/2021-06-03.error.log",
+            "hash": "4a1819ffeba6cf658685540da0102e7c"
+        },
+        {
+            "date": 1622736314403,
+            "name": "logs/error/2021-06-04.error.log",
+            "hash": "ed4045dddd9ed3e2adb9126376236b20"
+        },
+        {
+            "date": 1622823350565,
+            "name": "logs/error/2021-06-05.error.log",
+            "hash": "feebbef53048bfd6c1109e377c4c5818"
+        },
+        {
+            "date": 1623319086574,
+            "name": "logs/error/2021-06-10.error.log",
+            "hash": "abc3556ebc4fa1e6a6488491185b214c"
+        },
+        {
+            "date": 1623396306609,
+            "name": "logs/error/2021-06-11.error.log",
+            "hash": "12f23e1c27fde9bceead587edd8b3773"
+        },
+        {
+            "date": 1623423612323,
+            "name": "logs/error/2021-06-12.error.log",
+            "hash": "1c86164401224acee3d5350d3489a841"
         }
     ]
 }

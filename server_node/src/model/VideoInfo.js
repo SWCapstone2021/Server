@@ -9,6 +9,7 @@ const ScriptSchema = new Schema({
 
 const videoInfoSchema = new Schema({
     video_id: String,
+    title: String,
     scriptions: [ScriptSchema],
     summarization: String
 });
