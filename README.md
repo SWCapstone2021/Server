@@ -27,7 +27,7 @@
     <a href="https://github.com/SWCapstone2021/Server/stargazers">
         <img src="https://img.shields.io/github/stars/SWCapstone2021/Server"/>
     </a>
-    <a href="https://github.com/SWCapstone2021/Server/blob/main/LICENSE">
+    <a href="https://github.com/SWCapstone2021/Server/blob/m/LICENSE">
         <img src="https://img.shields.io/github/license/SWCapstone2021/Server"/>
     </a> <br/>
   </p>
@@ -79,6 +79,8 @@ FindU의 대략적인 아키텍쳐입니다.
 ## Contributor
 
 Maintainer : 허범수
+
+Contributor : 강한결, 김수연, 남희수, 오승민
 
 
 ## License
